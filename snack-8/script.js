@@ -20,4 +20,14 @@ const students = [
 ];
 
 // Recupera la classe dello studente 'Marco Lanci'
+for (let i = 0; i < students.length; i++) {
+  const student = students[i];
+  if (student.name === 'Marco Lanci'){
+    console.log(student.class);
+  }
+}
+
+
+const classe = students.filter(student => student.name === 'Marco Lanci').map(student => student.class);
 // Risultato: '3C'
+console.log(classe);
